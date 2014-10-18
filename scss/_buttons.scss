@@ -1,16 +1,30 @@
+@mixin button($back:green, $color:red) {
+  color: $color;
+  background: $back;
+  padding:10px;
+}
+
+.btn-a {
+  @include button(4px, #000);
+}
+
+.btn-b {
+  @include button;
+}
+
 .btn {
   text: { //text adds text- to the attribute sepcification
     decoration:underline;
   }
 }
 
-$rounded: 3px !default;
+@mixin transition($val...) {
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  transition: $val;
+}
 
-.btn-a {
-  border-radius: $rounded;
-  color: #777;
+.btn-c {
+  @include transition(color 0.3s ease-in, background 0.5s ease-out)
 }
-.btn-b {
-  border-radius: $rounded;
-  color: #222;
-}
+

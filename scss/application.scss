@@ -36,7 +36,6 @@
 //$name is a variable with the name of name
 //$name:'Allan'; !default; is a variable of text set to default. Default values do not overwrite other variables with the same name
 
-
 $rounded: 5px; //will overwrite the $rounded !default from _buttons
 
 //other variables, booleans:
@@ -76,12 +75,26 @@ $side: top;
 
 sup {
   position:relative;
-  #{$side}: -0.5em;
+  #{$side}: -0.5em; //will add top attribute to sup - [can also be used in the selector]
 }
 
+//Mixins are blocks of reusable code (see _buttons)
+//Mixins are awesome for vendor prefixes - and animations!!!
+//... = variable argument, which will allow you to write css with commas, such as css animations
 
+@mixin box-sizing($x: border-box) {
+  -webkit-box-sizing:$x ;
+  -moz-box-sizing:$x ;
+  box-sizing:$x ;
+}
 
+.content {
+  @include box-sizing;
+}
 
+.callout {
+  @include box-sizing(content-box);
+}
 
 
 

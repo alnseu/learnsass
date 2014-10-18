@@ -1,13 +1,20 @@
+.btn-a {
+  color: #000;
+  background: 4px;
+  padding: 10px; }
+
+.btn-b {
+  color: red;
+  background: green;
+  padding: 10px; }
+
 .btn {
   text-decoration: underline; }
 
-.btn-a {
-  border-radius: 3px;
-  color: #777; }
-
-.btn-b {
-  border-radius: 3px;
-  color: #222; }
+.btn-c {
+  -webkit-transition: color 0.3s ease-in, background 0.5s ease-out;
+  -moz-transition: color 0.3s ease-in, background 0.5s ease-out;
+  transition: color 0.3s ease-in, background 0.5s ease-out; }
 
 a {
   color: #999; }
@@ -47,5 +54,15 @@ h1 {
 sup {
   position: relative;
   top: -0.5em; }
+
+.content {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.callout {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
 
 /*# sourceMappingURL=application.css.map */
