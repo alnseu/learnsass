@@ -1,3 +1,21 @@
+.btn {
+  text-decoration: underline; }
+
+.btn-a {
+  border-radius: 3px;
+  color: #777; }
+
+.btn-b {
+  border-radius: 3px;
+  color: #222; }
+
+a {
+  color: #999; }
+  a:hover {
+    color: yellow; }
+  a:active {
+    color: red; }
+
 .content {
   border: 1px solid red;
   padding: 20px; }
@@ -7,5 +25,27 @@
   .content p {
     font-size: 1.2em;
     margin: 15px 0; }
+  .content .callout {
+    border-color: green; }
+  .content.callout {
+    border-color: blue; }
+
+.sidebar {
+  width: 300px;
+  min-height: 40px;
+  background: #ccc;
+  display: block; }
+  .users .sidebar {
+    width: 400px; }
+
+p {
+  border-top: 1px solid #ccc; }
+
+h1 {
+  border-top: 1px solid rgba(0, 255, 0, 0.5); }
+
+sup {
+  position: relative;
+  top: -0.5em; }
 
 /*# sourceMappingURL=application.css.map */

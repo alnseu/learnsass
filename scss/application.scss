@@ -1,4 +1,7 @@
+//Nesting
+
 @import "buttons";
+@import "links";
 
 .content {
   border:1px solid red;
@@ -11,4 +14,113 @@
     font-size: 1.2em;
     margin: 15px 0;
   }
+  .callout {
+    border-color:green;
+  }
+  &.callout { //The &. combines with the parent selector thus making: content.callout
+    border-color:blue;
+  }
 }
+
+.sidebar {
+  width:300px;
+  min-height:40px;
+  background:#ccc;
+  display:block;
+  .users & { //The space_& puts the selector infront of the parent thus making .users .sidebar
+    width:400px;
+  }
+}
+
+//Variables
+//$name is a variable with the name of name
+//$name:'Allan'; !default; is a variable of text set to default. Default values do not overwrite other variables with the same name
+
+
+$rounded: 5px; //will overwrite the $rounded !default from _buttons
+
+//other variables, booleans:
+$light: false;
+$shadow: true;
+//values
+$rounded: 4px;
+$line-height:1.5px;
+$font-size:3rem;
+//colors
+$base:purple;
+$border:rgba(0,255,0,0.5);
+$shadow:#333;
+//strings
+$header: 'Helvetica Neue';
+$callout: Arial;
+$message: "Laoding";
+//lists
+$authors: nick,dan,john;
+$margin:40px 0 20px 100px;
+//null
+$shadow:null;
+
+p {
+  $border:#ccc;
+  border-top: 1px solid $border;
+}
+h1 {
+  border-top:1px solid $border;
+}
+
+//Interpolation: inclusion of a variable in a rule defined by ${}. Is related to concatenation
+//Shim: to fill out or bring to a level by inserting a shim or shims.
+// #{}
+
+$side: top;
+
+sup {
+  position:relative;
+  #{$side}: -0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
