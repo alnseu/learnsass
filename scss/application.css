@@ -1,0 +1,11 @@
+.content {
+  border: 1px solid red;
+  padding: 20px; }
+  .content h2 {
+    font-size: 2em;
+    margin: 20px 0; }
+  .content p {
+    font-size: 1.2em;
+    margin: 15px 0; }
+
+/*# sourceMappingURL=application.css.map */
