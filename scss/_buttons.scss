@@ -1,15 +1,15 @@
-@mixin button($back:green, $color:red) {
+@mixin button($margin, $color:red) {
   color: $color;
-  background: $back;
+  margin: $margin;
   padding:10px;
 }
 
 .btn-a {
-  @include button(4px, #000);
+  @include button(4px); //since $margin isn't set in @mixin line, we have to pass a value or we get an error
 }
 
 .btn-b {
-  @include button;
+  @include button(5px);
 }
 
 .btn {
@@ -18,7 +18,7 @@
   }
 }
 
-@mixin transition($val...) {
+@mixin transition($val...) { //... makes it into a vararg dismissing css values that crave multiple comma (like css animations)
   -webkit-transition: $val;
   -moz-transition: $val;
   transition: $val;

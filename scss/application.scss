@@ -82,7 +82,17 @@ sup {
 //Mixins are awesome for vendor prefixes - and animations!!!
 //... = variable argument, which will allow you to write css with commas, such as css animations
 
-@mixin box-sizing($x: border-box) {
+/*
+@mixin main($name) {
+  -webkit-box-sizing:$name ;
+  -moz-box-sizing:$name ;
+  box-sizing:$name ;
+  }
+
+  Will pass three attributes into main, allowing $name to be changable
+*/
+
+@mixin box-sizing($x: border-box) { //in this case $x's default is border-box
   -webkit-box-sizing:$x ;
   -moz-box-sizing:$x ;
   box-sizing:$x ;
@@ -97,7 +107,15 @@ sup {
 }
 
 
+//Interpolation and mixins
 
+@mixin highlight($color, $side) { //this mixin defines a color and a side, and by using interpolation, we can define the side. AWESOME!!
+  border-#{$side}-color: $color;
+}
+
+.content {
+  @include highlight(blue,left);
+}
 
 
 

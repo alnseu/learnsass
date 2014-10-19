@@ -1,11 +1,11 @@
 .btn-a {
-  color: #000;
-  background: 4px;
+  color: red;
+  margin: 4px;
   padding: 10px; }
 
 .btn-b {
   color: red;
-  background: green;
+  margin: 5px;
   padding: 10px; }
 
 .btn {
@@ -55,6 +55,15 @@ sup {
   position: relative;
   top: -0.5em; }
 
+/*
+@mixin main($name) {
+  -webkit-box-sizing:$name ;
+  -moz-box-sizing:$name ;
+  box-sizing:$name ;
+  }
+
+  Will pass three attributes into main, allowing $name to be changable
+*/
 .content {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -64,5 +73,8 @@ sup {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box; }
+
+.content {
+  border-left-color: blue; }
 
 /*# sourceMappingURL=application.css.map */
