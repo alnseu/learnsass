@@ -108,6 +108,7 @@ sup {
 
 
 //Interpolation and mixins
+//Note to self: variables without a default value must come before those with ie: ($value, $value:x, $value:y)
 
 @mixin highlight($color, $side) { //this mixin defines a color and a side, and by using interpolation, we can define the side. AWESOME!!
   border-#{$side}-color: $color;
