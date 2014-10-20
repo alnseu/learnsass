@@ -118,18 +118,101 @@ sup {
   @include highlight(blue,left);
 }
 
+.extended {
+  border:1px solid red;
+  padding:10px;
+  h2 {
+    font-size:2em;
+  }
+}
+
+.unintended {
+  @extend .extended;
+  background:grey;
+}
+
+%ir { //image replacer boilerplate
+  border:0;
+  font: 0/0 a;
+  text-shadow:none;
+  color:transparent;
+  background-color:transparent;
+}
+
+.logo {
+  @extend %ir;
+}
+
+//Directives are used for control
+//step1
+
+@function fluidize() {
+  @return 35%;
+}
+
+.sidebar {
+  width:fluidize();
+}
+
+//step2
+
+@function fluidize($target, $context) {
+  @return ($target / $context) * 100%;
+}
+
+.sidebar {
+  width:fluidize(100px,500px);
+}
+
+//conditional code works like JS ==, !=, >, >=, <, <=
+
+//$theme: dark;
+$theme: pink;
+
+header {
+  @if $theme == dark {
+    background:#000;
+  } @else if $theme == pink {
+   background:pink;
+  } @else {
+    background:#fff;
+  }
+}
+
+//loops
+
+$authors: allan brian kristian;
+
+@each $author in $authors {
+  .author-#{$author} {
+    background:url(author-#{$author}.jpg);
+  }
+}
 
 
+.item {
+  position:absolute;
+  right:0;
+  @for $i from 1 through 3 {
+    &.item-#{$i} {
+      top: $i * 30px;
+    }
+  }
+}
 
+//while loop
+$y: 1;
 
-
-
-
-
-
-
-
-
+.newitem {
+  position: absolute;
+  right: 0;
+  @while $y > 4 {
+    &.newitem-#{$y} {
+      top: $y * 30px;
+    }
+    $y: $y + 1;
+  }
+}
 
 
 

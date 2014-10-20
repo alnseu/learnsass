@@ -28,3 +28,22 @@
   @include transition(color 0.3s ease-in, background 0.5s ease-out)
 }
 
+//extending allows you to add duplicate attributes from prior defined scss
+
+%btn {
+  background:green;
+  border:1px solid red;
+  padding:5px;
+}
+
+
+.btn-e {
+  @extend %btn;
+}
+
+.btn-f {
+  @extend .btn-e;
+  @include button(2px);
+}
+
+//Placeholder selectors are defined by percentage % and can be used to create general style rules

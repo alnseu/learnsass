@@ -16,6 +16,16 @@
   -moz-transition: color 0.3s ease-in, background 0.5s ease-out;
   transition: color 0.3s ease-in, background 0.5s ease-out; }
 
+.btn-e, .btn-f {
+  background: green;
+  border: 1px solid red;
+  padding: 5px; }
+
+.btn-f {
+  color: red;
+  margin: 2px;
+  padding: 10px; }
+
 a {
   color: #999; }
   a:hover {
@@ -76,5 +86,49 @@ sup {
 
 .content {
   border-left-color: blue; }
+
+.extended, .unintended {
+  border: 1px solid red;
+  padding: 10px; }
+  .extended h2, .unintended h2 {
+    font-size: 2em; }
+
+.unintended {
+  background: grey; }
+
+.logo {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent; }
+
+.sidebar {
+  width: 35%; }
+
+.sidebar {
+  width: 20%; }
+
+header {
+  background: pink; }
+
+.author-allan {
+  background: url(author-allan.jpg); }
+
+.author-brian {
+  background: url(author-brian.jpg); }
+
+.author-kristian {
+  background: url(author-kristian.jpg); }
+
+.item {
+  position: absolute;
+  right: 0; }
+  .item.item-1 {
+    top: 30px; }
+  .item.item-2 {
+    top: 60px; }
+  .item.item-3 {
+    top: 90px; }
 
 /*# sourceMappingURL=application.css.map */
